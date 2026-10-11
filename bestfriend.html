@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who's your bestfriend</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    "
+  >
+    <div style="
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
+        height: 100vh;
+        gap: 10px;
+
+      ">
+      <div style="display: flex; flex-direction: column; ">
+        <h1>Enter the name of your <span style="color: green;">bestfriend</span></h1>
+        <form action="" style="width: 100%;  display: flex;">
+        <input type="text" name="" id="bestfriendName" style="width: 100%;"/>
+        <button type="button" id="submitBtn" style="justify-content: center; align-items: center;">Submit</button>
+        </form>
+      </div>
+      <div id="harrisonName" style="color: red;"></div>
+    </div>
+  </body>
+
+  <script>
+    const bestfriendName = document.getElementById("bestfriendName");
+    const harrisonName = document.getElementById("harrisonName");
+    const submitBtn = document.getElementById("submitBtn");
+
+    function checkName() {
+      const inputVal = bestfriendName.value;
+
+      if (inputVal !== "Somebody" && inputVal !== "Harrison") {
+        inputVal.innerText = ""
+        harrisonName.textContent = "You know their name, so fucking type it";
+        setTimeout(() => {
+          harrisonName.textContent = "";
+          inputVal.inn = "";
+        }, 3000);
+        return;
+      }
+
+
+
+      window.location.href = "note.html";
+    }
+
+    submitBtn.addEventListener("click", checkName);
+  </script>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Lolo</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border-width: 90px;
+    "
+  >
+    <div
+      style="
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
+        height: 100vh;
+        gap: 10px;
+      "
+      id="questionBox"
+    >
+      <h1
+        style="
+          font-family:
+            &quot;Segoe UI&quot;, Tahoma, Geneva, Verdana, sans-serif;
+        "
+      >
+        Is your name <span id="name-bold">Lolo</span>?
+      </h1>
+      <div
+        style="
+          width: 50%;
+          justify-content: center;
+          display: flex;
+          justify-content: space-around;
+          gap: 10px;
+        "
+      >
+        <button
+          type="button"
+          id="yesBtn"
+          style="
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            background-color: green;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+          "
+        >
+          Yes
+        </button>
+        <button
+          type="button"
+          id="noBtn"
+          style="
+            width: 100%;
+            padding: 10px;
+            background-color: red;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+
+          "
+        >
+          No
+        </button>
+      </div>
+    </div>
+
+    <div
+      style="
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 100%;
+        height: 100vh;
+        gap: 10px;
+      "
+      id="noDisplay"
+    >
+      <h1>Fuck You Then</h1>
+      <p>Go tf back and click yes!</p>
+      <p><a href="./index.html">I love harrison!</a></p>
+      <p style="color: green">☝️ u gotta click that btw</p>
+    </div>
+  </body>
+
+  <script>
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+    const noDisplay = document.getElementById("noDisplay");
+    const questionBox = document.getElementById("questionBox");
+
+    function fuckYou() {
+      noDisplay.style.display = "flex";
+      noDisplay.style.flexDirection = "column";
+      questionBox.style.display = "none";
+    }
+
+    noBtn.addEventListener("click", fuckYou);
+    yesBtn.addEventListener("click", ()=>{
+        window.location.href = "bestfriend.html"
+    })
+  </script>
+</html>
